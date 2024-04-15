@@ -11,3 +11,13 @@ Breaking Bad is an American crime drama television series created and produced b
 ![***The iconic photo of Jessi Pikman and Walter White***](/Users/elgun/Downloads/breaking-bad-newbutton-1674233834062.jpg)
 
 
+# Information about episodes
+| Season | Episodes | Originally aired |
+|--------|----------|:----------------:|
+| 1      | 7        | January 20, 2008 |
+| 2      | 13       | March 8, 2009    |
+| 3      | 13       | March 21, 2010   |
+| 4      | 13       | July 17, 2011    |
+| 5      | 16       | July 15, 2012    |
+
+
