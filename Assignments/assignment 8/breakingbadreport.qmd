@@ -9,6 +9,7 @@ format:
     toc-expand: 3
     toc-title: Contents
     toc-location: body
+    title-block-banner: true
   docx: default
 theme:
   light: flatly
