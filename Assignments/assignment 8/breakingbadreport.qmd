@@ -2,6 +2,7 @@
 title: "Breaking Bad Report"
 author: "ElgunIsmayilov"
 date: "2024-04-15"
+code-fold: true
 format:
   html:
     toc: true
@@ -32,3 +33,8 @@ Breaking Bad is an American crime drama television series created and produced b
 | 5      | 16       | July 15, 2012    |
 
 
+
+```{r}
+print("Hello, World!")
+
+```
