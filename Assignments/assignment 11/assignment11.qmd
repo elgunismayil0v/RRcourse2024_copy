@@ -1,0 +1,64 @@
+---
+title: "Metaanalysis in R"
+author: "Elgun Ismayilov"
+date: 27-05-2024
+format:  
+  html:
+    theme: lumen
+    toc: true
+    toc_float: true
+title-block-banner: true
+execute:
+  echo: fenced
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label = "setup",
+#| include = FALSE
+library(meta)
+library(metafor)
+library(dplyr)
+#setwd("")
+```
+
+
+```{r}
+
+m <- readxl::read_xlsx("/Users/elgun/Desktop/RRcourse2024_copy/11. Metaanalysis/data/data.xlsx")
+m[1:5,]
+```
+
+```{r}
+m.raw <- metacont(n.e=N_boys,
+                  mean.e=Mean_boys_play_male,
+                  sd.e=SD_boys_play_male,
+                  n.c=N_girls,
+                  mean.c=Mean_girls_play_male,
+                  sd.c=SD_girls_play_male,
+                  data=m,
+                  studlab=paste(Study),
+                  comb.fixed = TRUE,
+                  comb.random = TRUE,
+)
+m.raw
+```
+
+
+```{r}
+m.raw %>% forest()
+
+```
+
+## Checking for publication bias
+
+Again, we use what we defined previously.
+
+```{r}
+m.raw %>% funnel()
+```
+
+```{r}
+m.raw %>% metareg(`Mean_boys_play_male` + `Mean_girls_play_male`)
+```
